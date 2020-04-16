@@ -94,7 +94,7 @@ char* recibir_mensaje(int socket_cliente)
 	switch(paquete->codigo_operacion){
 	case MENSAJE:
 		mensaje = malloc(paquete->buffer->size);
-		memcpy(mensaje,&(paquete->buffer->stream),paquete->buffer->size);
+		memcpy(mensaje,(paquete->buffer->stream),paquete->buffer->size);
 
 
 	break;
